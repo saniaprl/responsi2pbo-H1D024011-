@@ -1,7 +1,7 @@
 # Responsi 2 - Praktikum Pemrograman Berorientasi Objek
 
-**Dibuat oleh:** Sani Aprillia Anjani
-**NIM:** H1D024011 
+**Dibuat oleh:** Sani Aprillia Anjani  
+**NIM:** H1D024011  
 **Shift Baru:** B  
 **Shift KRS:** G
 
