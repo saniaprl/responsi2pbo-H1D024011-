@@ -9,3 +9,19 @@
 4. Bagaimana keyword super membantu membedakan atribut yang memiliki nama sama antara parent dan child?
 
 5. Mengapa pendekatan inheritance lebih efisien dibanding menyalin ulang seluruh atribut dan method ke dalam class Member?
+
+Jawaban
+1.  Karena setiap Member sejatinya adalah Customer. Sebelum data khusus member (poin/level) diisi, data dasarnya (nama/ID)
+    harus disiapkan terlebih dahulu oleh constructor kelas induk agar objek terbentuk dengan sempurna.
+
+2.  Tujuannya agar kita tidak perlu menulis ulang kode untuk menampilkan nama dan ID. Kita cukup meminjam fungsi yang sudah ada
+    di kelas induk, lalu tinggal menambahkan kode untuk menampilkan data tambahan (poin/level).
+
+3.  Sangat penting ketika kita ingin menambahkan fitur baru tanpa menghapus fitur lama. Contohnya saat menyimpan data,
+    kita panggil super.simpan() untuk data dasar, lalu tambahkan kode sendiri untuk data khusus.
+
+4.  Jika kelas anak dan induk punya variabel dengan nama sama, kita bisa pakai super.nama untuk menunjuk variabel milik induk,
+    dan this.nama untuk variabel milik kelas anak itu sendiri.
+
+5.  Inheritance mencegah duplikasi kode. Jika nanti ada perubahan pada format data Customer, kita cukup mengubahnya
+    di satu tempat (kelas induk), dan otomatis kelas Member akan ikut terupdate tanpa perlu kita edit satu per satu.

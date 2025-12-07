@@ -6,3 +6,21 @@ Setelah anda menyelesaikan kode, tolong jawab pertanyaan dibawah ini ya =
 3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh kode?
 4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan (compatibility) suatu sistem yang sudah berjalan?
 5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa muncul pada multiple inheritance?
+
+Jawaban
+1.  Tujuan utama interface adalah untuk mendefinisikan standar kemampuan (kontrak) yang harus dimiliki oleh kelas-kelas yang mengimplementasikannya.
+    Interface memastikan bahwa semua kelas tersebut memiliki nama method yang sama, meskipun cara kerjanya (isinya) berbeda-beda.
+
+2.  Karena interface hanya kerangka kosong, bukan kode program yang kaku. Maknanya adalah fleksibilitas; kita bisa membuat sistem yang longgar (loose coupling)
+    di mana satu perintah (misal: login()) bisa bekerja pada berbagai jenis objek (Programmer, Manajer, Admin) tanpa perlu tahu detail internal masing-masing.
+
+3.  extends digunakan untuk mewarisi sifat dari induk ke anak (hubungan "adalah" / is-a), sedangkan implements digunakan untuk
+    memenuhi kontrak kemampuan (hubungan "bisa melakukan" / can-do). Secara sintaks, extends digunakan jika sebuah interface
+    mewarisi interface lain, sedangkan implements digunakan jika sebuah class ingin menggunakan interface tersebut.
+
+4.  Default method diperkenalkan agar kita bisa menambahkan fitur baru ke dalam interface lama tanpa merusak (membuat error)
+    semua kelas yang sudah terlanjur mengimplementasikan interface tersebut. Ini menjaga kompatibilitas ke belakang.
+
+5.  Multiple interface memungkinkan satu kelas punya banyak peran (misal: ProgrammerMagang adalah Karyawan DAN Pengguna Sistem).
+    Ini aman dari masalah kompleksitas (seperti Diamond Problem) karena interface tidak mewariskan variabel (state) atau logika
+    yang saling bertabrakan, hanya mewariskan daftar kewajiban method.

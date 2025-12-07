@@ -7,3 +7,15 @@ Apa yang terjadi jika kita mencoba mengubah nilai suatu konstanta setelah objek 
 Bagaimana cara mendefinisikan konstanta dalam bahasa Java?
 
 Jawaban
+1.  Fungsi (Function): adalah metode yang mengembalikan nilai (memiliki return value) setelah dieksekusi.
+    Tipe datanya bukan void (contoh: double, int). Dalam kode ini, contohnya adalah hitungBMI() dan hitungKalori().
+    Prosedur (Procedure): adalah metode yang tidak mengembalikan nilai. Metode ini hanya melakukan serangkaian
+    instruksi (seperti mencetak ke layar) dan bertipe void. Dalam kode ini, contohnya adalah tampilKategori() dan tampilInfo()
+
+2.  Penggunaan konstanta penting untuk mencegah perubahan nilai secara tidak sengaja oleh bagian kode lain, meningkatkan
+    keamanan data (seperti nilai standar medis), dan mempermudah pemeliharaan kode karena kita tahu nilai tersebut pasti tetap.
+
+3.  Jika kita mencoba mengubah nilai variabel final, kompilator (compiler) akan menolak dan menghasilkan error (gagal kompilasi).
+    Contoh: Pada kode ini, jika kita menulis p.faktorAktivitas = 1.5;, maka akan muncul pesan error: "cannot assign a value to final variable faktorAktivitas".
+
+4.  Menggunakan kata kunci 'final' sebelum tipe data. Contoh: final double faktorAktivitas = 1.2;

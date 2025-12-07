@@ -6,3 +6,19 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 3. Apa tujuan penggunaan keyword "implements" pada sebuah class?
 4. Apakah sebuah class dapat mengimplementasikan lebih dari satu interface? Jelaskan dan berikan contoh sederhana.
 5. Jika sebuah class mengimplementasikan interface, apa yang terjadi jika class tersebut tidak mengimplementasikan semua method dari interface tersebut?
+
+Jawaban
+1.  Interface hanya berisi deklarasi method kosong tanpa implementasi kode dan tidak bisa diinstansiasi menjadi objek.
+    Class biasa berisi method yang memiliki implementasi kode lengkap, memiliki atribut data, dan dapat diinstansiasi menjadi objek.
+
+2.  Karena interface berfungsi sebagai kontrak atau kerangka desain abstrak. Ia hanya mendefinisikan "apa" yang harus dilakukan
+    oleh class, tetapi membiarkan class penurunnya menentukan "bagaimana" cara melakukannya.
+
+3.  Keyword implements digunakan untuk menyatakan bahwa sebuah class akan menggunakan dan mematuhi kontrak dari interface tertentu,
+    sehingga class tersebut wajib mengimplementasikan (menulis ulang) seluruh abstract method yang ada di interface tersebut.
+
+4.  Ya, sebuah class dapat mengimplementasikan lebih dari satu interface. Contoh: class Burung implements BisaTerbang, BisaMakan,
+    artinya class Burung wajib memiliki kemampuan terbang dan makan sesuai definisi kedua interface tersebut.
+
+5.  Akan terjadi compile-time error. Class tersebut akan dianggap sebagai abstract class karena tidak lengkap, sehingga
+    kita harus melengkapi implementasi semua methodnya atau mendeklarasikan class tersebut sebagai abstract.
